@@ -61,7 +61,8 @@ public class DatabaseConfig {
     hibernateProperties.put("hibernate.show_sql", HIBERNATE_SHOW_SQL);
     hibernateProperties.put("hibernate.hbm2ddl.auto", HIBERNATE_HBM2DDL_AUTO);
     sessionFactoryBean.setHibernateProperties(hibernateProperties);
-    
+    sessionFactoryBean.setMappingResources("/WEB-INF/classes/mapping.hbm.xml");
+
     return sessionFactoryBean;
   }
 /*
